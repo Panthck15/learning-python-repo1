@@ -14,7 +14,7 @@ class Die:
         return random.randint(1, self._num_sides)
     
 class Bag:    
-    def __int__(self, dice_dictionary):
+    def __init__(self, dice_dictionary):
         self.bag =[]
         for sides, count in dice_dictionary.items():
             for _ in range(count):
@@ -34,5 +34,5 @@ if __name__ == '__main__':
             set_aside = b.draw(num_things=3)    
             drawn = b.draw(num_things=2)    
             s = sum([die.roll() for die in drawn])
-    
+            print("We drew {} ".format(s))
     #It has: 1d4, 2d6, 4d8, 2d10, 1d12, 3d20. 
